@@ -1,0 +1,76 @@
+.collapses {
+	margin: 19px 0;
+	@media screen and (min-width: $lgb) {
+    margin: 0 108.5px 38px 108.5px;
+  }
+}
+
+.collapse {
+  @include f-column;
+  width: 100%;
+	margin: 20px 0;
+	@media screen and (min-width: $mdb) {
+		margin: 30px auto 0;
+	}
+
+	&--content {
+    @include xs-radius;
+    @include width-height(100%, 30px);
+		background-color: $primary-color;
+		color: $quaternary-color;
+		cursor: pointer;
+		padding: 7px 15px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media screen and (min-width: $mdb) {
+			height: 52px;
+		}
+
+		&__title {
+			@include font(13px, 700, 18.54px);
+			@media screen and (min-width: $mdb) {
+				@include font(24px, 700, 25.67px);
+			}
+		}
+	}
+
+  &--toggle {
+    @include xs-radius;
+    color: $tertiary-color;
+    background: $secondary-color;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, height 0.5s 0.5s ease-in-out;
+
+    &__text {
+      @include font(12px, 400, 17.11px);
+      margin: 0;
+      padding: 22px 15px;
+      pointer-events: none;
+      @media screen and (min-width: $mdb) {
+        @include font(18px, 400, 25.67px);
+      }
+    }
+  }
+}
+
+.text-visible {
+  height: 100%;
+	opacity: 1;
+	transition: height 0.5s ease-in-out, opacity 0.5s 0.5s ease-in-out;
+}
+
+.chevron {
+	width: 16px;
+	transform: rotate(0deg);
+	transition: 0.5s ease-in-out;
+	@media screen and (min-width: $mdb) {
+		width: 24px;
+	}
+}
+
+.rotation {
+	transform: rotate(180deg);
+	transition: 0.5s ease-in-out;
+}

@@ -2,16 +2,25 @@
 
 * {
 	box-sizing: border-box;
-	font-family: "Montserrat", sans-serif;
 }
 
 body {
+  font-family: "Montserrat", sans-serif;
   margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 main {
+  flex-grow: 1;
 	margin: 5%;
-	@media screen and (min-width: $breakpoint-desktop) {
+	@media screen and (min-width: $mdb) {
 		margin: 0 100px;
 	}
 }

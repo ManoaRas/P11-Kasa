@@ -1,0 +1,44 @@
+.banner {
+  position: relative;
+
+  &__img {
+    @include sm-radius;
+    @include width-height(100%, 111px);
+    @media screen and (min-width: $mdb) {
+      @include lg-radius;
+      height: 223px;
+    }
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+
+  &--shadow {
+    @include banner;
+  }
+
+  &__text {
+    @include f-center;
+    @include width-height(100%, 100%);
+    @include font(18px, 700, 24px);
+
+    color: $quaternary-color;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+
+
+    @media screen and (min-width: $mdb) {
+      @include font(32px, 700, 24px);
+    }
+    @media screen and (min-width: $lgb) {
+      @include font(48px, 700, 24px);
+    }
+  }
+}
+
+.banner__text::after {
+  @media screen and (max-width: $xxsb) {
+    content: '';
+    min-width: 30%;
+  }
+}

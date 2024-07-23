@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
 
-import banner from '../assets/homeBanner.png'
-import Card from '../components/Card'
-import data from "../data/logements.json"
+import banner from "../assets/homeBanner.png"
+import houses from "../data/accommodation.json"
+
+import Card from "../components/Card"
 
 export default function Home() {
   return (
     <section>
-      <div className="home-banner">
-        <img className="home-banner__img" src={banner} alt="Home Banner" />
-        <div className="home-banner__text">Chez vous, partout et ailleurs</div>
+      <div className="banner">
+        <img className="banner__img banner--shadow" src={banner} alt="Home Banner" />
+        <div className="banner__text">Chez vous, partout et ailleurs</div>
       </div>
 
       <div className="cards">
-        {data.map((house, id) => (
-          <Link className="cards--link" to={`/logement/${house.id}`} key={id}>
+        {houses.map((house, id) => (
+          <Link className="cards--link" to={`/accommodation/${house.id}`} key={id}>
             <Card cover={house.cover} title={house.title} />
           </Link>
         ))}
