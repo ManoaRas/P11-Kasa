@@ -1,5 +1,37 @@
-@mixin font($size, $weight) {
+// BOX
+@mixin f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// RADIUS
+@mixin xs-radius {
+  border-radius: 10px;
+}
+@mixin lg-radius {
+  border-radius: 25px;
+}
+
+// SIZES
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// FONTS
+@mixin font($size, $weight, $line) {
   font-size: ($size);
   font-weight: $weight;
-  line-height: 34.22px;
+  line-height: $line;
+}
+
+// BANNER
+@mixin banner {
+  @include f-center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin boxShadow {
+  box-shadow: rgba(255, 96, 96, 0.9) 0 0 22px 6px;
 }

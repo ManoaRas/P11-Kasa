@@ -1,0 +1,88 @@
+.home-banner {
+  position: relative;
+
+  &__img {
+    @include xs-radius;
+    @include width-height(100%, 111px);
+    @media screen and (min-width: $breakpoint-desktop) {
+      @include lg-radius;
+      height: 223px;
+    }
+    border-radius: 25px;
+    filter: brightness(0.4);
+    object-fit: cover;
+  }
+
+  &__text {
+    @include f-center;
+    @include width-height(100%, 100%);
+    @include font(24px, 700, 68.45px);
+
+    color: $quaternary-color;
+    position: absolute;
+    top: 0;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      @include font(48px, 700, 24px);
+    }
+  }
+}
+
+.cards {
+  @include xs-radius;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  margin: 22px 0;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    @include lg-radius;
+    background-color: $secondary-color;
+    gap: 50px;
+    margin: 43px 0;
+    padding: 5% 1%;
+  }
+
+  &--link {
+    text-decoration: none;
+  }
+}
+
+.card {
+  @include xs-radius;
+  @include width-height(335px, 255px);
+  position: relative;
+  display: flex;
+  min-width: 335px;
+  transition: transform 1s;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    @include width-height(340px, 340px);
+  }
+
+  &__img {
+    @include xs-radius;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+  }
+
+  &--layer {
+    @include xs-radius;
+    @include width-height(100%, 100%);
+    background: $linear-cards;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+
+    &__title {
+      @include font(18px, 700, 25.67px);
+      display: flex;
+      align-items: flex-end;
+      color: $quaternary-color;
+      margin: 20px;
+    }
+  }
+}

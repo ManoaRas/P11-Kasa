@@ -23,7 +23,7 @@
       text-decoration: none;
       margin-left: 1rem;
       @media screen and (min-width: $breakpoint-desktop) {
-        @include font(24px, 500);
+        @include font(24px, 500, 34.22px);
         text-align: right;
         margin-left: 3rem;
       }

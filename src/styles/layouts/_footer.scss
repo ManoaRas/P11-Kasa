@@ -9,10 +9,10 @@
   justify-content: center;
 
   &--logo {
-    @include font(12px, 500);
+    @include font(12px, 500, 34.22px);
     padding-bottom: 28px;
     @media screen and (min-width: $breakpoint-desktop) {
-			@include font(24px, 500);
+			@include font(24px, 500, 34.22px);
 		}
   }
 
