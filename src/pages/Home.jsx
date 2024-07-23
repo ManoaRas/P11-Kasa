@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 import banner from "../assets/homeBanner.png"
 import houses from "../data/accommodation.json"

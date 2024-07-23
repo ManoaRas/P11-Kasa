@@ -1,7 +1,7 @@
 .header {
+  margin: 20px 5%;
   display: flex;
   justify-content: space-between;
-  margin: 5%;
   @media screen and (min-width: $mdb) {
 		margin: 40px 100px;
 	}
@@ -21,15 +21,17 @@
       text-transform: none;
     }
 
-    &__link {
+    &--link {
       @include font(12px, 500, 17.11px);
       color: $tertiary-color;
       margin-left: 10px;
       text-align: right;
       text-decoration: none;
+      @media screen and (min-width: $smb) {
+        margin-left: 57px;
+      }
       @media screen and (min-width: $mdb) {
         @include font(24px, 500, 34.22px);
-        margin-left: 57px;
       }
 
       &:hover,

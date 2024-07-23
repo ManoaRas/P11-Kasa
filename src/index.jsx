@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 import Home from "./pages/Home"
 // import Accommodation from "./pages/Accommodation"
 import About from "./pages/About"
-// import Error from "./pages/Error"
+import Error from "./pages/Error"
 
 import "./styles/main.scss"
 
@@ -23,7 +23,7 @@ root.render(
           <Route path='/' element={<Home />} />
           {/* <Route path='/accommodation/:id' element={<Accommodation />} /> */}
           <Route path='/about' element={<About />} />
-          {/* <Route path='*' element={<Error />} /> */}
+          <Route path='*' element={<Error />} />
         </Routes>
       </main>
 

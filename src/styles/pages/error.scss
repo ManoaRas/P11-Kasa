@@ -1,0 +1,38 @@
+.error {
+	@include f-column;
+  color: $primary-color;
+
+  &__nbr {
+    @include font(96px, 700, 136.9px);
+    text-align: center;
+    margin: 0;
+    @media screen and (min-width: $mdb) {
+      @include font(200px, 700, 200px);
+    }
+  }
+
+  &__text {
+    @include font(18px, 500, 25.67px);
+    text-align: center;
+    @media screen and (min-width: $mdb) {
+      @include font(36px, 500, 51.34px);
+    }
+  }
+
+  &--link {
+    text-align: center;
+    &__text {
+      @include font(14px, 500, 19.96px);
+      @media screen and (min-width: $mdb) {
+        @include font(18px, 500, 25.67px);
+        margin: 0;
+      }
+      color: $tertiary-color;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        text-decoration-line: underline;
+      }
+    }
+  }
+}

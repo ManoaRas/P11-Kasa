@@ -18,8 +18,11 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-grow: 1;
-	margin: 5%;
+  margin: 20px 5%;
 	@media screen and (min-width: $mdb) {
 		margin: 0 100px;
 	}
