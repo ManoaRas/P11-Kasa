@@ -6,9 +6,7 @@
 }
 
 body {
-	@media (min-width: $breakpoint-desktop) {
-		max-width: 100%;
-	}
+  margin: 0;
 }
 
 main {

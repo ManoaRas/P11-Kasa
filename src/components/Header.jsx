@@ -1,17 +1,15 @@
 import { NavLink } from "react-router-dom"
 
-import Icon from "./Icon"
+import logo from "../assets/logoHeader.png"
 
 export default function Header() {
   return (
-    <header className='kasa-header'>
-      <Icon color="#FF6060" />
+    <header className="header">
+        <img className="header--logo" src={logo} alt="Kasa logo" />
 
-      <nav>
-        <ul>
-          <li><NavLink to='/'>Accueil</NavLink></li>
-          <li><NavLink to='/about'>A propos</NavLink></li>
-        </ul>
+      <nav className="header--nav">
+        <NavLink className="header--nav__link" to="/">Accueil</NavLink>
+        <NavLink className="header--nav__link" to="/about">A propos</NavLink>
       </nav>
     </header>
   )
