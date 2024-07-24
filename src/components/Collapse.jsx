@@ -2,23 +2,24 @@ import { useState } from "react"
 import Chevron from "../assets/vector.png"
 
 export default function Collapse(props) {
-  // Toggle collapse
-  const [toggle, setToggle] = useState(false)
-  const toggleState = () => {
-    setToggle(!toggle)
+  const [isExpanded, setIsExpanded] = useState(false)
+  const handleClick = () => {
+    setIsExpanded(!isExpanded)
   }
 
   return (
     <article className="collapse">
-      <div className="collapse--content" onClick={toggleState}>
-        <h2 className="collapse--content__title">{props.title}</h2>
-        <img className={`chevron ${toggle ? "rotation" : ""}`} src={Chevron} alt="Chevron" />
+      <div className="collapse--header" onClick={handleClick}>
+        <h2 className="collapse--header__title">{props.title}</h2>
+        <img
+          className={`chevron ${isExpanded ? "chevron--rotation" : ""}`}
+          src={Chevron}
+          alt="Chevron"
+        />
       </div>
 
-      <div className={`collapse--toggle ${toggle ? "text-visible" : ""}`}>
-        <p aria-hidden={toggle ? "true" : "false"} className="collapse--toggle__text">
-          {props.content}
-        </p>
+      <div className={isExpanded ? "collapse--expanded" : "collapse--closed"}>
+        <p className="collapse--expanded__text">{props.content}</p>
       </div>
     </article>
   )

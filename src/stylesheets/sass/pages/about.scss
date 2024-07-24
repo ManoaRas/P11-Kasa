@@ -13,7 +13,7 @@
 		margin: 30px auto 0;
 	}
 
-	&--content {
+	&--header {
     @include xs-radius;
     @include width-height(100%, 30px);
 		background-color: $primary-color;
@@ -35,13 +35,13 @@
 		}
 	}
 
-  &--toggle {
+  &--expanded {
     @include xs-radius;
     color: $tertiary-color;
     background: $secondary-color;
-    height: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out, height 0.5s 0.5s ease-in-out;
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 400ms ease-in-out, opacity 400ms ease-in-out;
 
     &__text {
       @include font(12px, 400, 17.11px);
@@ -53,24 +53,25 @@
       }
     }
   }
-}
 
-.text-visible {
-  height: 100%;
-	opacity: 1;
-	transition: height 0.5s ease-in-out, opacity 0.5s 0.5s ease-in-out;
+  &--closed {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 400ms ease-in-out, opacity 400ms ease-in-out;
+  }
 }
 
 .chevron {
 	width: 16px;
 	transform: rotate(0deg);
-	transition: 0.5s ease-in-out;
+	transition: 400ms ease-in-out;
 	@media screen and (min-width: $mdb) {
 		width: 24px;
 	}
-}
 
-.rotation {
-	transform: rotate(180deg);
-	transition: 0.5s ease-in-out;
+  &--rotation {
+    transform: rotate(180deg);
+    transition: 400ms ease-in-out;
+  }
 }

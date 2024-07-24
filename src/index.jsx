@@ -10,7 +10,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Error from "./pages/Error"
 
-import "./styles/main.scss"
+import "./stylesheets/css/style.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
