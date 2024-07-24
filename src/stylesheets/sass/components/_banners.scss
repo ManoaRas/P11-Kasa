@@ -6,10 +6,10 @@
     @include width-height(100%, 111px);
     @media screen and (min-width: $mdb) {
       @include lg-radius;
-      height: 223px;
+      @include width-height(100%, 223px);
     }
-    object-fit: cover;
     filter: brightness(0.6);
+    object-fit: cover;
   }
 
   &--shadow {
@@ -17,22 +17,19 @@
   }
 
   &__text {
-    @include f-center;
+    @include f-center(center);
     @include width-height(100%, 100%);
+    @include margin-padding(initial, 20px);
     @include font(18px, 700, 24px);
-
-    color: $quaternary-color;
-    padding: 20px;
-    position: absolute;
-    top: 0;
-
-
     @media screen and (min-width: $mdb) {
       @include font(32px, 700, 24px);
     }
     @media screen and (min-width: $lgb) {
       @include font(48px, 700, 24px);
     }
+    color: $quaternary-color;
+    position: absolute;
+    top: 0;
   }
 }
 

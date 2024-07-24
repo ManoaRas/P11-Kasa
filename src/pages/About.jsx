@@ -1,20 +1,17 @@
-import banner from "../assets/aboutBanner.png"
 import infos from "../data/about.json"
+import { Collapses } from "../components/Collapses"
+import { AboutBanner } from "../components/Banners"
 
-import Collapse from "../components/Collapse"
-
-export default function About() {
+export function About() {
   return (
-    <section>
-      <div className="banner">
-        <img className="banner__img" src={banner} alt="About Banner" />
-      </div>
+    <>
+      <AboutBanner />
 
-      <div className="collapses">
+      <section className="collapses">
         {infos.map((info, id) => (
-          <Collapse key={id} title={info.title} content={info.content} />
+          <Collapses key={id} title={info.title} content={info.content} />
         ))}
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

@@ -1,47 +1,44 @@
 .header {
-  margin: 20px 5%;
-  display: flex;
-  justify-content: space-between;
+  @include f-center(space-between);
+  @include margin-padding(20px 5%, initial);
   @media screen and (min-width: $mdb) {
-		margin: 40px 100px;
-	}
+    @include margin-padding(40px 100px, initial);
+  }
 
   &--logo {
     @include width-height(145px, 46.88px);
 		@media screen and (min-width: $mdb) {
       @include width-height(210.32px, 68px);
-		}
-	}
-
-  &--nav {
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    @media screen and (min-width: $mdb) {
-      text-transform: none;
     }
+	}
+  &--nav {
+    @include f-center(initial);
+    @media screen and (min-width: $mdb) {
+      text-transform: initial;
+    }
+    text-transform: uppercase;
 
     &--link {
       @include font(12px, 500, 17.11px);
-      color: $tertiary-color;
-      margin-left: 10px;
-      text-align: right;
-      text-decoration: none;
+      @include textDecoration(none);
       @media screen and (min-width: $smb) {
         margin-left: 57px;
       }
       @media screen and (min-width: $mdb) {
         @include font(24px, 500, 34.22px);
       }
+      color: $tertiary-color;
+      margin-left: 10px;
+      text-align: right;
 
       &:hover,
       &:focus {
-        text-decoration-line: underline;
+        @include textDecoration(underline);
       }
     }
   }
 }
 
 .active {
-  text-decoration-line: underline;
+  @include textDecoration(underline);
 }

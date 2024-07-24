@@ -1,0 +1,72 @@
+.collapse {
+  @include f-direction(column, center);
+  @include width-height(100%, initial);
+  @include margin-padding(20px 0, initial);
+  @media screen and (min-width: $mdb) {
+    @include margin-padding(30px auto 0, initial);
+  }
+
+	&--header {
+    @include f-center(space-between);
+    @include xs-radius;
+    @include width-height(100%, 30px);
+    @include margin-padding(initial, 7px 15px);
+		@media screen and (min-width: $mdb) {
+      @include width-height(100%, 52px);
+    }
+		background-color: $primary-color;
+		color: $quaternary-color;
+
+		&__title {
+			@include font(13px, 700, 18.54px);
+			@media screen and (min-width: $mdb) {
+        @include font(24px, 700, 25.67px);
+      }
+		}
+
+    &--chevron {
+      cursor: pointer;
+    }
+	}
+
+  &--expanded {
+    @include xs-radius;
+    @include anim-collapse(1000px, 1);
+    background-color: $secondary-color;
+    color: $tertiary-color;
+
+    &__text {
+      @include margin-padding(0, 22px 15px);
+      @include font(12px, 400, 17.11px);
+      @media screen and (min-width: $mdb) {
+        @include font(18px, 400, 25.67px);
+      }
+      pointer-events: none;
+    }
+  }
+
+  &--closed {
+    @include anim-collapse(0, 0);
+    overflow: hidden;
+  }
+
+  &--list {
+    @include margin-padding(13px 20px, 0);
+    @include font(12px, 400, 17.11px);
+    @media screen and (min-width: $mdb) {
+      @include font(18px, 400, 25.67px);
+    }
+    list-style: none;
+  }
+}
+
+.chevron {
+  @include width-height(16px, initial);
+  @include anim-chevron(0deg);
+	@media screen and (min-width: $mdb) {
+    @include width-height(24px, initial);
+	}
+}
+.rotation {
+  @include anim-chevron(180deg);
+}

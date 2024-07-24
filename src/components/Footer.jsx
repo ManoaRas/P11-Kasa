@@ -1,6 +1,6 @@
 import logo from "../assets/logoFooter.png"
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="footer">
       <img className="footer--logo" src={logo} alt="Kasa logo" />

@@ -1,0 +1,52 @@
+.carousel {
+  position: relative;
+
+  &--slider {
+    @include width-height(100%, 100%);
+    @include f-center(space-between);
+    position: absolute;
+    z-index: 2;
+  }
+
+  &--sliderc {
+    @include f-center(center);
+    @include width-height(40px, 40px);
+    @media screen and (min-width: $smb) {
+      @include width-height(96px, 119.64px);
+    }
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    object-fit: cover;
+    @include font(24px, 700, 24px);
+    @media screen and (min-width: $smb) {
+      @include font(46px, 700, 24px);
+    }
+    color: $quaternary-color;
+  }
+
+  &__img {
+    @include sm-radius;
+    @include width-height(100%, 255px);
+    @media screen and (min-width: $smb) {
+      @include width-height(100%, 415px);
+      @include lg-radius;
+    }
+    @media screen and (min-width: $xlb) {
+      @include width-height(100%, 800px);
+    }
+    filter: brightness(0.8);
+    object-fit: cover;
+    position: relative;
+  }
+
+  &__nbr {
+    @include width-height(100%, initial);
+    color: $quaternary-color;
+    text-align: center;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    z-index: 2;
+  }
+}

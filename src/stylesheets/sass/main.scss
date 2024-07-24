@@ -3,10 +3,14 @@
 
 @import "./bases/base";
 
-@import "./components/banner";
+@import "./components/banners";
+@import "./components/cards";
+@import "./components/carousels";
+@import "./components/collapses";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/hosts";
 
-@import "./layouts/footer";
-@import "./layouts/header";
 
 @import "./pages/about";
 @import "./pages/error";

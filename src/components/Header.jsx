@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom"
-
 import logo from "../assets/logoHeader.png"
 
-export default function Header() {
+export function Header() {
   return (
     <header className="header">
       <img className="header--logo" src={logo} alt="Kasa logo" />

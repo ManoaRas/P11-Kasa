@@ -1,0 +1,18 @@
+.footer {
+  @include f-direction(column, center);
+  @include width-height(100%, 209px);
+  @include margin-padding(0, initial);
+  align-items: center;
+  background-color: $tertiary-color;
+
+  &--logo {
+    @include font(12px, 500, 34.22px);
+    @media screen and (min-width: $mdb) {
+      @include font(24px, 500, 34.22px);
+    }
+  }
+
+  &__text {
+    color: $quaternary-color;
+  }
+}

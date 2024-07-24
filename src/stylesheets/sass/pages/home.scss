@@ -1,58 +1,17 @@
 .cards {
   @include sm-radius;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+  @include f-wrap(wrap, center);
+  @include width-height(100%, initial);
+  @include margin-padding(22px 0, initial);
   gap: 20px;
-  margin: 22px 0;
-
   @media screen and (min-width: $mdb) {
     @include lg-radius;
+    @include margin-padding(50px 0, initial);
     background-color: $secondary-color;
     gap: 50px;
-    margin: 43px 0;
-    padding: 50px 0;
   }
 
   &--link {
-    text-decoration: none;
-  }
-}
-
-.card {
-  @include sm-radius;
-  position: relative;
-  display: flex;
-  transition: transform 1s;
-  @media screen and (min-width: $smb) {
-    @include width-height(335px, 255px);
-  }
-  @media screen and (min-width: $mdb) {
-    @include width-height(340px, 340px);
-  }
-
-  &__img {
-    @include sm-radius;
-    width: 100%;
-    display: flex;
-    object-fit: cover;
-  }
-
-  &--layer {
-    @include sm-radius;
-    @include width-height(100%, 100%);
-    background: $linear-cards;
-    display: flex;
-    align-items: flex-end;
-    position: absolute;
-
-    &__title {
-      @include font(18px, 700, 25.67px);
-      display: flex;
-      align-items: flex-end;
-      color: $quaternary-color;
-      margin: 20px;
-    }
+    @include textDecoration(none);
   }
 }

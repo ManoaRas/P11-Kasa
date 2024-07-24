@@ -1,4 +1,4 @@
-export default function Card({ cover, title }) {
+export function Card({ cover, title }) {
   return (
     <article className="card">
       <img className="card__img" src={cover} alt={title} />

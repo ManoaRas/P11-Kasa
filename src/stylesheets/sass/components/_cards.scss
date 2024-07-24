@@ -1,0 +1,34 @@
+.card {
+  @include sm-radius;
+  @media screen and (min-width: $smb) {
+    @include width-height(335px, 255px);
+  }
+  @media screen and (min-width: $mdb) {
+    @include width-height(340px, 340px);
+  }
+  position: relative;
+  display: flex;
+
+  &__img {
+    @include sm-radius;
+    @include width-height(100%, initial);
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+  }
+
+  &--layer {
+    @include f-end;
+    @include sm-radius;
+    @include width-height(100%, 100%);
+    background: $linear-cards;
+    position: absolute;
+
+    &__title {
+      @include f-end;
+      @include margin-padding(20px, initial);
+      @include font(18px, 700, 25.67px);
+      color: $quaternary-color;
+    }
+  }
+}
