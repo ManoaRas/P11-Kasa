@@ -27,7 +27,7 @@
   &--left-infos {
     @include f-direction(row-reverse, space-between);
     @media screen and (min-width: $lgb) {
-      @include f-direction(row-reverse, space-around);
+      @include f-direction(column, space-around);
     }
   }
 

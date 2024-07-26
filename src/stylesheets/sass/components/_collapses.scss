@@ -23,10 +23,6 @@
         @include font(24px, 700, 25.67px);
       }
 		}
-
-    &--chevron {
-      cursor: pointer;
-    }
 	}
 
   &--expanded {
@@ -61,11 +57,13 @@
 }
 
 .chevron {
-  @include width-height(16px, initial);
   @include anim-chevron(0deg);
-	@media screen and (min-width: $mdb) {
-    @include width-height(24px, initial);
-	}
+  @media screen and (min-width: $mdb) {
+    font-size: x-large;
+  }
+
+  cursor: pointer;
+  font-size: medium;
 }
 .rotation {
   @include anim-chevron(180deg);

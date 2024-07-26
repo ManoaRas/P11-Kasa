@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 
 export function Carousel({ pictures }) {
   const [current, setCurrent] = useState(0)
@@ -10,8 +10,8 @@ export function Carousel({ pictures }) {
         : (current === pictures.length - 1 ? 0 : current + 1)
     )
   }
-  const prevSlide = () => changeSlide('prev')
-  const nextSlide = () => changeSlide('next')
+  const prevSlide = function() { return changeSlide('prev') }
+  const nextSlide = function() { return changeSlide('next') }
 
   return (
     <article className="carousel">
@@ -38,7 +38,7 @@ export function Carousel({ pictures }) {
               <img
                 className="carousel__img"
                 src={picture}
-                alt={`Accommodation ${index + 1}`}
+                alt={"Accommodation " + index + 1}
               />
               {pictures.length > 1 && (
                 <span className="carousel__nbr">

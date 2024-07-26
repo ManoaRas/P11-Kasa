@@ -253,9 +253,6 @@ main {
     line-height: 25.67px;
   }
 }
-.collapse--header--chevron {
-  cursor: pointer;
-}
 .collapse--expanded {
   border-radius: 5px;
   max-height: 1000px;
@@ -302,21 +299,20 @@ main {
 }
 
 .chevron {
-  width: 16px;
-  height: initial;
   transform: rotate(0deg);
-  transition: 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  cursor: pointer;
+  font-size: medium;
 }
 @media screen and (min-width: 1024px) {
   .chevron {
-    width: 24px;
-    height: initial;
+    font-size: x-large;
   }
 }
 
 .rotation {
   transform: rotate(180deg);
-  transition: 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
 }
 
 .footer {
@@ -455,7 +451,7 @@ main {
 @media screen and (min-width: 1440px) {
   .hosts--left-infos {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: space-around;
   }
 }

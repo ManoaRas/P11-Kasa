@@ -1,5 +1,4 @@
-import { useState } from "react"
-import Chevron from "../assets/vector.png"
+import React, { useState } from "react"
 
 export function Collapses({ title, content}) {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -11,10 +10,8 @@ export function Collapses({ title, content}) {
     <div className="collapse">
       <div className="collapse--header">
         <h2 className="collapse--header__title">{title}</h2>
-        <img
-          className={`collapse--header--chevron ${isExpanded ? "rotation" : "chevron"}`}
-          src={Chevron}
-          alt="Chevron"
+        <i
+          className={`fa-solid fa-chevron-up chevron ${isExpanded ? "rotation" : ""}`}
           onClick={handleClick}
         />
       </div>
@@ -22,11 +19,12 @@ export function Collapses({ title, content}) {
       <div className={isExpanded ? "collapse--expanded" : "collapse--closed"}>
         {typeof content === "object" ? (
           <ul className="collapse--list">
-            {content.map((text, index) => (
-              <li key={index}> {text}</li>
-            ))}
+            {content.map(function(text, index) {
+              return ( <li key={index}> {text}</li> )
+            })}
           </ul>
-        ) : (
+        )
+        : (
           <p className="collapse--expanded__text">{content}</p>
         )}
       </div>

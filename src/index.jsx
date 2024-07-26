@@ -20,10 +20,10 @@ root.render(
 
       <main>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/accommodation/:id' element={<Accommodation />} />
-          <Route path='/about' element={<About />} />
-          <Route path='*' element={<Error />} />
+          <Route element={<Home />} path='/' />
+          <Route element={<Accommodation />} path='/accommodation/:id' />
+          <Route element={<About />} path='/about' />
+          <Route element={<Error />} path='*' />
         </Routes>
       </main>
 

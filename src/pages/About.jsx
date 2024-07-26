@@ -1,3 +1,4 @@
+import React from "react"
 import infos from "../data/about.json"
 import { Collapses } from "../components/Collapses"
 import { AboutBanner } from "../components/Banners"
@@ -9,7 +10,7 @@ export function About() {
 
       <section className="collapses">
         {infos.map((info, id) => (
-          <Collapses key={id} title={info.title} content={info.content} />
+          <Collapses content={info.content} key={id} title={info.title} />
         ))}
       </section>
     </>

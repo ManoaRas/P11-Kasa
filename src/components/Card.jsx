@@ -1,7 +1,9 @@
+import React from "react"
+
 export function Card({ cover, title }) {
   return (
     <article className="card">
-      <img className="card__img" src={cover} alt={title} />
+      <img alt={title} src={cover} className="card__img" />
       <div className="card--layer">
         <p className="card--layer__title">{title}</p>
       </div>

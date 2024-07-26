@@ -1,3 +1,4 @@
+import React from "react"
 import { Collapses } from "../components/Collapses"
 
 export function Hosts({ infos }) {
@@ -12,7 +13,7 @@ export function Hosts({ infos }) {
 
         <div className="hosts--tags">
           {tags.map((tag, index) => (
-            <span key={index} className="hosts--tags__tag">{tag}</span>
+            <span className="hosts--tags__tag" key={index}>{tag}</span>
           ))}
         </div>
       </div>
@@ -20,27 +21,27 @@ export function Hosts({ infos }) {
       <div className="hosts--left-infos">
         <div className="hosts--profil">
           <p className="hosts--profil__name">{host.name}</p>
-          <img className="hosts--profil__avatar" src={host.picture} alt="hostName" />
+          <img alt="hostName" src={host.picture} className="hosts--profil__avatar" />
         </div>
 
         <div className="hosts--ratings">
           {stars.map(
             (star) => rating >= star ? (
-              <i key={star.toString()} className="fa-solid fa-star" />
+              <i className="fa-solid fa-star" key={star.toString()} />
             )
             : (
-              <i key={star.toString()} className="fa-regular fa-star" />
+              <i className="fa-regular fa-star" key={star.toString()} />
             )
           )}
         </div>
       </div>
 
       <div className="hosts--description">
-        <Collapses title="Description" content={description} />
+        <Collapses content={description} title="Description" />
       </div>
 
       <div className="hosts--equipement">
-        <Collapses title="Équipement" content={equipments} />
+        <Collapses content={equipments} title="Équipement" />
       </div>
     </article>
   )
