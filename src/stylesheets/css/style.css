@@ -31,6 +31,10 @@ main {
   }
 }
 
+.error-page {
+  justify-content: center;
+}
+
 .banner {
   position: relative;
 }

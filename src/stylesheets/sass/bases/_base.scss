@@ -21,4 +21,9 @@ main {
     @include margin-padding(0 100px, initial);
   }
   flex-grow: 1;
+
+}
+
+.error-page {
+  justify-content: center;
 }

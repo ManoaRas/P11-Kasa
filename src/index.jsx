@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom"
 
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
@@ -12,13 +12,15 @@ import { Error } from "./pages/Error"
 
 import "./stylesheets/css/style.css"
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <React.StrictMode>
-    <Router>
+const App = () => {
+  const location = useLocation();
+  const isErrorPage = !['/', '/accommodation/:id', '/about'].includes(location.pathname);
+
+  return (
+    <>
       <Header />
 
-      <main>
+      <main className={isErrorPage ? 'error-page' : ''}>
         <Routes>
           <Route element={<Home />} path='/' />
           <Route element={<Accommodation />} path='/accommodation/:id' />
@@ -28,6 +30,15 @@ root.render(
       </main>
 
       <Footer />
+    </>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <Router>
+      <App />
     </Router>
   </React.StrictMode>
 )
