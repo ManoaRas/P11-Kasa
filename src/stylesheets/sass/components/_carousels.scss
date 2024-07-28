@@ -32,7 +32,7 @@
       @include width-height(100%, 415px);
       @include lg-radius;
     }
-    @media screen and (min-width: $xlb) {
+    @media screen and (min-width: $xxlb) {
       @include width-height(100%, 800px);
     }
     filter: brightness(0.8);

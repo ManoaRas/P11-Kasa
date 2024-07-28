@@ -1,6 +1,6 @@
 .hosts {
   margin-bottom: 27px;
-  @media screen and (min-width: $lgb) {
+  @media screen and (min-width: $mdb) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 50px;
@@ -26,7 +26,7 @@
 
   &--left-infos {
     @include f-direction(row-reverse, space-between);
-    @media screen and (min-width: $lgb) {
+    @media screen and (min-width: $mdb) {
       @include f-direction(column, space-around);
     }
   }
@@ -36,7 +36,7 @@
 
     &__name {
       @include font(12px, 500, 17.11px);
-      @media screen and (min-width: $lgb) {
+      @media screen and (min-width: $mdb) {
         @include font(18px, 500, 25.67px);
       }
       color: $primary-color;
@@ -45,7 +45,7 @@
 
     &__avatar {
       @include width-height(32px, 32px);
-      @media screen and (min-width: $lgb) {
+      @media screen and (min-width: $mdb) {
         @include width-height(64px, 64px);
       }
       border-radius: 100px;
@@ -59,7 +59,7 @@
       @include sm-radius;
       @include margin-padding(10px 10px 0 0, 2px 29px);
       @include font(10px, 700, 14.26px);
-      @media screen and (min-width: $lgb) {
+      @media screen and (min-width: $mdb) {
         @include font(14px, 700, 19.96px);
         padding: 3px 40px;
       }
@@ -74,7 +74,7 @@
     .fa-star {
       @include f-center(center);
       @include width-height(18px, 18px);
-      @media screen and (min-width: $lgb) {
+      @media screen and (min-width: $mdb) {
         @include width-height(36px, 36px);
       }
     }
@@ -87,13 +87,13 @@
   }
 
   &--description {
-    @media screen and (min-width: $lgb) {
+    @media screen and (min-width: $mdb) {
       margin-right: 38px;
     }
   }
 
   &--equipement {
-    @media screen and (min-width: $lgb) {
+    @media screen and (min-width: $mdb) {
       margin-left: 38px;
     }
   }

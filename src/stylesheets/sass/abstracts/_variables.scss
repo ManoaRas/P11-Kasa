@@ -11,10 +11,12 @@ $about-background: $background-color url(../../assets/aboutBanner.png);
 $home-background: $background-color url(../../assets/homeBanner.png);
 
 // BREAKPOINTS
-$xxsb: 375px;
-$xsb: 425px;
-$smb: 768px;
-$mdb: 1024px;
-$lgb: 1440px;
-$xlb: 1980px;
-$xxlb: 2560px;
+$xxxsb: 320px; // small mobile
+$xxsb: 375px; // medium mobile
+$xsb: 425px; // large mobile
+$smb: 768px; // tablet || small desktop
+$mdb: 1024px; // medium desktop
+$lgb: 1440px; // large desktop
+$xlb: 1920px; // FHD desktop
+$xxlb: 2560px; // WQHD desktop
+$xxxlb: 3840px; // 4K UHD desktop

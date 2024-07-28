@@ -195,7 +195,7 @@ main {
     border-radius: 25px;
   }
 }
-@media screen and (min-width: 1980px) {
+@media screen and (min-width: 2560px) {
   .carousel__img {
     width: 100%;
     height: 800px;
@@ -221,7 +221,7 @@ main {
   margin: 20px 0;
   padding: initial;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .collapse {
     margin: 30px auto 0;
     padding: initial;
@@ -239,7 +239,7 @@ main {
   background-color: #ff6060;
   color: #FFFFFF;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .collapse--header {
     width: 100%;
     height: 52px;
@@ -250,7 +250,7 @@ main {
   font-weight: 700;
   line-height: 18.54px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .collapse--header__title {
     font-size: 24px;
     font-weight: 700;
@@ -273,7 +273,7 @@ main {
   line-height: 17.11px;
   pointer-events: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .collapse--expanded__text {
     font-size: 18px;
     font-weight: 400;
@@ -294,7 +294,7 @@ main {
   line-height: 17.11px;
   list-style: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .collapse--list {
     font-size: 18px;
     font-weight: 400;
@@ -308,7 +308,7 @@ main {
   cursor: pointer;
   font-size: medium;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .chevron {
     font-size: x-large;
   }
@@ -412,7 +412,7 @@ main {
 .hosts {
   margin-bottom: 27px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hosts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -452,7 +452,7 @@ main {
   flex-direction: row-reverse;
   justify-content: space-between;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hosts--left-infos {
     display: flex;
     flex-direction: column;
@@ -471,7 +471,7 @@ main {
   color: #ff6060;
   margin-right: 10px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hosts--profil__name {
     font-size: 18px;
     font-weight: 500;
@@ -483,7 +483,7 @@ main {
   height: 32px;
   border-radius: 100px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hosts--profil__avatar {
     width: 64px;
     height: 64px;
@@ -505,7 +505,7 @@ main {
   color: #FFFFFF;
   white-space: nowrap;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hosts--tags__tag {
     font-size: 14px;
     font-weight: 700;
@@ -525,7 +525,7 @@ main {
   width: 18px;
   height: 18px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hosts--ratings .fa-star {
     width: 36px;
     height: 36px;
@@ -537,12 +537,12 @@ main {
 .hosts--ratings .fa-regular {
   color: #E3E3E3;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hosts--description {
     margin-right: 38px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hosts--equipement {
     margin-left: 38px;
   }
