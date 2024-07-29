@@ -15,7 +15,9 @@ export function About() {
 
       <section className="collapses">
         {infos.map((info, id) => (
-          <Collapses content={info.content} key={id} title={info.title} />
+          <Collapses key={id} title={info.title}>
+            <p className="collapse--expanded__text">{info.content}</p>
+          </Collapses>
         ))}
       </section>
     </>

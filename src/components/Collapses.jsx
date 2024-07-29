@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-export function Collapses({ title, content}) {
+export function Collapses({ title, children }) {
   const [isExpanded, setIsExpanded] = useState(false)
   const handleClick = () => {
     setIsExpanded(!isExpanded)
@@ -17,16 +17,7 @@ export function Collapses({ title, content}) {
       </div>
 
       <div className={isExpanded ? "collapse--expanded" : "collapse--closed"}>
-        {typeof content === "object" ? (
-          <ul className="collapse--list">
-            {content.map(function(text, index) {
-              return ( <li key={index}> {text}</li> )
-            })}
-          </ul>
-        )
-        : (
-          <p className="collapse--expanded__text">{content}</p>
-        )}
+        { children }
       </div>
     </div>
   )

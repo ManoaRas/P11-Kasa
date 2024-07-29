@@ -9,7 +9,7 @@ export function Hosts({ infos }) {
   return (
     <article className="hosts">
       <div>
-        <h2 className="hosts__title">{title}</h2>
+        <h1 className="hosts__title">{title}</h1>
         <p className="hosts__location">{location}</p>
 
         <div className="hosts--tags">
@@ -38,11 +38,19 @@ export function Hosts({ infos }) {
       </div>
 
       <div className="hosts--description">
-        <Collapses content={description} title="Description" />
+        <Collapses title="Description">
+          <p className="collapse--expanded__text">{description}</p>
+        </Collapses>
       </div>
 
       <div className="hosts--equipement">
-        <Collapses content={equipments} title="Équipement" />
+        <Collapses title="Équipement">
+          <ul className="collapse--list">
+            {equipments.map(function(text, index) {
+              return ( <li key={index}> {text}</li> )
+            })}
+          </ul>
+        </Collapses>
       </div>
     </article>
   )
