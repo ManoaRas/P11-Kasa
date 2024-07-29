@@ -1,5 +1,6 @@
 import React from "react"
 import { Collapses } from "../components/Collapses"
+import { Tags } from "../components/Tags"
 
 export function Hosts({ infos }) {
   const { title, location, tags, host, rating, description, equipments } = infos
@@ -13,7 +14,7 @@ export function Hosts({ infos }) {
 
         <div className="hosts--tags">
           {tags.map((tag, index) => (
-            <span className="hosts--tags__tag" key={index}>{tag}</span>
+            <Tags key={index} tag={tag} />
           ))}
         </div>
       </div>
